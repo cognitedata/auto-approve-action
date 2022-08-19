@@ -1572,7 +1572,7 @@ function remove_dependabot_approvals(client, pr) {
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const token = core.getInput('github-token', { required: true });
+            const token = core.getInput('github-token');
             const { pull_request: pr } = github.context.payload;
             if (!pr) {
                 throw new Error('Event payload missing `pull_request`');
