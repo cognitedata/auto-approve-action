@@ -4,7 +4,7 @@
 
 This is a fork of `hmarr/auto-approve-action`.
 
-Automatically approve GitHub pull requests. The `GITHUB_TOKEN` secret must be provided as the `github-token` input for the action to work.
+Automatically approve GitHub pull requests.
 
 ## Usage instructions
 
@@ -24,8 +24,6 @@ jobs:
       - name: Auto approve
         uses: cognitedata/auto-approve-dependabot-action@v3.0.1
         if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Why?

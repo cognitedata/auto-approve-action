@@ -5,8 +5,9 @@ branding:
   color: 'green'
 inputs:
   github-token:
+    default: ${{ github.token }}
     description: 'The GITHUB_TOKEN secret'
-    required: true
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'

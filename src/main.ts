@@ -71,7 +71,7 @@ async function remove_dependabot_approvals(client: any, pr: any) {
 
 async function run() {
   try {
-    const token = core.getInput('github-token', { required: true });
+    const token = core.getInput('github-token');
 
     const { pull_request: pr } = github.context.payload;
     if (!pr) {
